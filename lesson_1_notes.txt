@@ -1,0 +1,217 @@
+2015-12-07
+Course : Git and Github at audacity.com
+Notes:
+
+Find the diffs between larger files:
+Windows cmd: FC (file compare)
+mac/linux cmd: Diff
+**********
+Setting up the Sublime editor for udacity:
+Mac
+Find where the subl command is located. 
+subl comes with Sublime, so it should be in the directory where Sublime is located for you.  For many people, this is /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin.  To test this, run ls /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin.  You should see the subl command listed.  If you get the error No such file or directory, Sublime is located somewhere else for you and you'll need to find it.
+
+If you do not have a file named .bash_profile in your home directory, create it.  Because the name of this file begins with a period, it will not appear in most file navigators or when you run ls.  Instead, run ls -a to see if you have the file.
+
+Add the line export PATH=$PATH:/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin to the end of your .bash_profile.  If subl was in a different directory for you in step 1, use that directory.
+
+Close and re-open your terminal.  Typing subl in the terminal should now open Sublime.
+*********
+
+$ git log
+commit 3884eab839af1e82c44267484cf2945a766081f3
+Author: cbuckey <caroline@udacity.com>
+Date:   Fri Apr 29 12:33:05 2011 -0700
+
+    Add color
+
+commit 3e42136a76cf78c6c421cd720427bf6337c2d623
+Author: Doug McInnes <doug@dougmcinnes.com>
+Date:   Tue Mar 15 22:34:49 2011 -0700
+
+    now using requestAnimationFrame
+
+    see this for more info:
+    http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+
+commit 4035769377cce96a88d5c1167079e12f30492391
+Author: Doug McInnes <doug@dougmcinnes.com>
+Date:   Wed Jun 9 21:04:32 2010 -0700
+
+    frame interval was set wrong after game was paused
+
+commit 25ede836903881848fea811df5b687b59d962da3
+Author: Doug McInnes <doug@dougmcinnes.com>
+Date:   Wed May 26 23:52:00 2010 -0700
+
+    a couple missing ends with the ipad version
+
+commit df035382c41b4d0cda86a1aa30b53f15bef05b53
+Author: Doug McInnes <doug@dougmcinnes.com>
+Date:   Tue May 25 22:18:23 2010 -0700
+
+    I can't spell 'screen' apparently :)
+
+commit b0678b161fcf74467ed3a63110557e3d6229cfa6
+Author: cbuckey <caroline@udacity.com>
+Date:   Mon May 24 04:15:21 2010 -0700
+
+    Revert controls
+
+commit f19cb1b80fe27e938e4d72770ca0a42f25e99ecc
+Author: cbuckey <caroline@udacity.com>
+Date:   Mon May 24 04:03:05 2010 -0700
+
+    Fix typo in space
+
+commit 75928a98e18479b22b18888a33d36379f17b43c1
+:
+**************************************
+
+Quiz
+
+A
+B
+C
+D
+E
+F
+
+--- file.txt    2014-12-03 16:27:41.000000000 -0500
++++ updated.txt 2014-12-03 16:28:11.000000000 -0500
+@@ -2,4 +2,6 @@
+ B
++$
+ C
+-D
++#
++%
+ E
+
+A
+B
+$
+C
+#
+%
+E
+F
+
+commit 7a2de2b16fb4f2e3e20db5079d579512af4f8ee4
+Author: pmugford <pmugford@gmail.com>
+Date:   Sat Dec 12 01:06:33 2015 +0100
+
+    removed a and f
+
+commit 26d8721b8f8629f9c717898b33a80eedcee43e40
+Author: pmugford <pmugford@gmail.com>
+Date:   Sat Dec 12 00:59:34 2015 +0100
+
+    add last update
+
+commit f17509a80bc6176af8939ff568e1d6e2281e8ff3
+Author: pmugford <pmugford@gmail.com>
+Date:   Sat Dec 12 00:53:53 2015 +0100
+
+Exercises:
+
+Pappu Pakia
+
+latest commit:
+fa4c6bade4970c282b3870ad16f1bde8164663a9
+
+
+commit fa4c6bade4970c282b3870ad16f1bde8164663a9
+Author: Rishabh <rishabh.pugalia@gmail.com>
+Date:   Sat Jan 5 14:41:49 2013 +0530
+
+    changing flattr link
+
+commit 708bcce690e5faa5739bd471507c102ea16b77f7
+Author: Rishabh <rishabh.pugalia@gmail.com>
+Date:   Mon Dec 31 23:18:16 2012 +0530
+
+    pressing down arrow wont cause scroll down anymore
+
+commit 547f4171a82ec6429d002c1acef357aec41d3f17
+Author: Rishabh Pugalia <rishabh.pugalia@gmail.com>
+Date:   Fri Dec 28 16:27:21 2012 +0530
+
+    refactoring collision detection
+
+commit 71d52709ddc4066e7a79a1d0a412e43429a0cdeb
+Author: Rishabh <rishabh.pugalia@gmail.com>
+Date:   Thu Dec 27 11:17:10 2012 +0530
+
+    removing old readme
+
+commit 7c81b8021ec16c5c7b240220314d01200957d605
+Author: Rishabh <rishabh.pugalia@gmail.com>
+Date:   Thu Dec 27 11:11:08 2012 +0530
+
+    removing an ad
+
+commit 9c76f50d1aaaa3ac9841286cca2b49bc67f29ae9
+Author: Rishabh <rishabh.pugalia@gmail.com>
+Date:   Thu Dec 27 11:08:17 2012 +0530
+
+    updating description, etc.
+
+
+buggy version
+547f4171a82ec6429d002c1acef357aec41d3f17
+
+ utils.intersect = function(bounds1, bounds2) {
+
+    return !(
+      bounds1.end_x < bounds2.start_x ||
+      bounds2.end_x < bounds1.start_x ||
+      bounds1.end_y < bounds2.start_y ||
+      bounds2.end_y < bounds1.start_y
+    );
+
+  };
+
+my change
+0d9197935083f2f175e498e812f80dc72152a836
+
+***************
+
+commit 9c76f50d1aaaa3ac9841286cca2b49bc67f29ae9
+Author: Rishabh <rishabh.pugalia@gmail.com>
+Date:   Thu Dec 27 11:08:17 2012 +0530
+
+    updating description, etc.
+
+commit 003c8c197cd3b1e5b28b58f53ee14d7ebaa9bb3a
+Author: Rishabh Pugalia <rishabh.pugalia@gmail.com>
+Date:   Wed Dec 12 13:59:27 2012 +0530
+
+    speeding clones up
+
+commit 746f762e38b5bbb7d0b837464ef6ec3f8ee5bf91
+Author: Rishabh Pugalia <rishabh.pugalia@gmail.com>
+Date:   Mon Dec 10 14:28:15 2012 +0530
+
+    Update index.htm
+
+********************
+
+diff --git a/js/pappu.js b/js/pappu.js
+index 271761e..265fa78 100644
+--- a/js/pappu.js
++++ b/js/pappu.js
+@@ -244,8 +244,8 @@
+         if (clone.x > mit.W || clone.y < 0 || clone.y > mit.H)
+           self.clones.splice(index, 1);
+
+-        clone.x += utils.randomNumber(5, 10);
+-        clone.y += utils.randomNumber(-20, 20);
++        clone.x += utils.randomNumber(500, 1000);
++        clone.y += utils.randomNumber(-2000, 2000);
+
+         clone.draw(ctx);
+       });
+muggy ((0d91979...)) js $
+
+****************************
