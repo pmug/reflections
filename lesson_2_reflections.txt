@@ -1,0 +1,24 @@
+R1.
+What happens when you initialize a repository? Why do you need to do it?
+A.
+The folder is setup as a git repository. the file ".git" is added, which is actually a subfolder, to contain coniguration information
+
+R2.
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+A. the working directory is the location of the current version of all files in the repository
+The staging area contains files that have been added to the repository but not yet committed. 
+
+R2.
+How can you use the staging area to make sure you have one commit per logical change?
+A. First do a "git add" to move the files included in the logical change, then commit only those files, while other changed files
+remain in the working area.
+
+R3.
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+A.
+. making backups
+. new language versions
+
+The branch names help identify the reason for the branch
+
+
