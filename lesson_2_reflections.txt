@@ -22,3 +22,22 @@ A.
 The branch names help identify the reason for the branch
 
 
+R4.
+How do the diagrams help you visualize the branch structure?
+A.
+the branch diagram show the commits and their parents and how they are connected
+
+R5.
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+A.
+Merging 2 files means merging all changes in both files together so the result is one master branch containing all changes in chronological order
+In the diagram the merge is represented by 2 branches becoming 1 and this is shown in the graph
+
+R6.
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+A.
+Git only automatically merges if there are no conflicts. The pro is that it does not try to guess how to resolve a conflict.
+Guessing how to resolve is very difficult and would result in errors
+The con is that git requires the developer to manually resolve a conflict which can sometimes seem obvious.
+
+
